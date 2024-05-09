@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
     padding: 0;
@@ -44,7 +47,7 @@ ul {
 }
 
 nav {
-    background-color: #f3faff;
+    background-color: rgb(241, 197, 171);
     box-shadow: 0 0 4px #bbd0e2;
     position: fixed;
     top: 0;
@@ -64,6 +67,18 @@ nav {
 
 .nav-links ul {
     gap: 16px;
+    text-decoration: none;
+  padding: 10px 15px;
+  
+    border: none;
+    border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1px;
+  float: left;
+  background-color: var(--primary-color);
+  color: white !important;
 }
 
 .hover-link {
@@ -111,9 +126,10 @@ nav {
 }
 
 main {
-    padding-block: 20px;
+    padding-block: 120px;
     margin-top: 80px;
 }
+
 
 .cards-container {
     justify-content: space-between;
@@ -152,3 +168,88 @@ main {
 .news-source {
     margin-block: 12px;
 }
+
+h1,
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+}
+.footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer article {
+    margin-top: 0.5rem;
+  }
+  footer {
+    background-color: var(--dark-color);
+    color: black;
+    height: 100%;
+    padding: 2rem 0rem;
+    margin-top: 1rem;
+  }
+  
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+  }
+  
+  .footer h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  
+  .footer .logo {
+    margin: 0rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer article:nth-child(3) p {
+    border-bottom: 1px dotted rgb(82, 82, 82);
+  }
+  
+  .footer input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 5px 0px;
+  }
+  
+  .footer article:nth-child(2) a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+  }
+  
+  .footer article:last-child a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    background-color: orange;
+    margin-top: 0.7rem;
+  }
+  
+  .footer a:hover {
+    background-color: var(--light-grey-color) !important;
+    color: black !important;
+  }
+  .copyright {
+    padding: 0.5rem;
+    background-color: rgb(75, 75, 75);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+  }
+  .xyz {
+    background-color: rgb(241, 197, 171);
+  }
+  
