@@ -1,7 +1,11 @@
 const API_KEY = "e5675756eaf249e39da39653738465fd";
 const url = "https://newsapi.org/v2/everything?q=";
 
-window.addEventListener("load", () => fetchNews("India"));
+
+
+window.addEventListener("load", () => fetchNews("Kohli"));
+const preloader = document.querySelector(".preloader");
+
 
 function reload() {
     window.location.reload();
@@ -18,13 +22,23 @@ function bindData(articles) {
     const newsCardTemplate = document.getElementById("template-news-card");
 
     cardsContainer.innerHTML = "";
+    
+   let articlecount = 0;
+    for(let i=0; i < articles.length; i++)
+        {
+            
+            const article = articles[i];
+            if (!article.urlToImage) continue;
+            const cardClone = newsCardTemplate.content.cloneNode(true);
+            fillDataInCard(cardClone, article);
+            cardsContainer.appendChild(cardClone);
 
-    articles.forEach((article) => {
-        if (!article.urlToImage) return;
-        const cardClone = newsCardTemplate.content.cloneNode(true);
-        fillDataInCard(cardClone, article);
-        cardsContainer.appendChild(cardClone);
-    });
+            articlecount++;
+            if(articlecount>=9)
+            {
+                break;
+            }
+        }
 }
 
 function fillDataInCard(cardClone, article) {
@@ -67,3 +81,4 @@ searchButton.addEventListener("click", () => {
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
 });
+
